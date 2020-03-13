@@ -37,7 +37,12 @@ class Results extends React.Component {
       const hasCrawl = crawl.content ? 'yes' : undefined;
 
       return (
-        <li key={item.name || item.title} className="animated fadeInUp" onClick={() => this.props.onShowCrawl(crawl)} crawl={hasCrawl} style={styleObj}>
+        <li
+          key={item.name || item.title}
+          className="animated fadeInUp"
+          onClick={() => crawl.content ? this.props.onShowCrawl(crawl) : ''}
+          crawl={hasCrawl}
+          style={styleObj}>
           <h2><button>{item.name || item.title}</button></h2>
           <div className="stats">
             {

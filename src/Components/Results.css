@@ -92,7 +92,7 @@
 .results li:hover .stats,
 .results li:focus-within .stats {
   margin-top: .5rem;
-  max-height: 20rem;
+  max-height: 99rem;
   opacity: 1;
 }
 
@@ -110,10 +110,6 @@
 }
 
 @media screen and (min-width: 800px) {
-  .results li:hover .stats {
-    max-height: 10rem;
-  }
-
   .results li .stats .stat {
     width: 25%;
   }
