@@ -5,6 +5,7 @@ import SearchForm from './Components/SearchForm';
 import Loader from './Components/Loader';
 import Results from './Components/Results';
 import Crawl from './Components/Crawl';
+import Footer from './Components/Footer';
 import './App.css';
 
 import api from './api';
@@ -46,7 +47,7 @@ class App extends React.Component {
   }
 
   navigateToPage = (n=1) => {
-    document.querySelector('html').scrollTop = 0;
+    document.querySelector('.App').scrollTop = 0;
     let page = this.state.page + n;
     this.setState({ 
       page: page,
@@ -95,7 +96,10 @@ class App extends React.Component {
             onNavigate={this.navigateToPage}/>
 
           {this.state.crawl && this.state.crawl.content && this.state.endpoint === 'films' ? (<Crawl data={this.state.crawl} onClose={this.handleClose}/>) : ''}
+
         </main>
+
+        <Footer />
       </div>
     );
   }

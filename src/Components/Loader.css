@@ -30,6 +30,6 @@
 }
 
 @keyframes flash {
-  0%, 60%, 100% { background: #7A7D82; }
-  80% { background: #FFFFFF; }
+  0%, 60%, 100% { background: var(--focusColor) }
+  80% { background: var(--fgColor) }
 }

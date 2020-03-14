@@ -3,18 +3,52 @@
 
 * {
   box-sizing: border-box;
+  outline-color: var(--accentColor);
 }
 
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  --bgColor: rgb(30, 36, 45);
+  --fgColor: rgb(255,255,255);
+  --defaultColor: rgba(255,255,255,0.2);
+  --focusColor: rgba(255,255,255,0.3);
+  --statColor: rgba(255,255,255,0.7);
+  --accentColor: rgb(168, 210, 239);
+  --resultColor: rgba(0,0,0,0.75);
+  --hoverColor: rgb(0,0,0);
 }
 
 body {
   font-family: 'Roboto Mono', monospace;
-  background: #2F333C;
-  color: #FFF;
-  overflow-y: scroll;
+  background-image: url('./media/bg.png');
+  background-size: auto 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--bgColor);
+  color: var(--fgColor);
+}
+
+#root {
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+@keyframes movearound {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 50% 0;
+  }
 }
 
 .animated {
@@ -22,21 +56,21 @@ body {
 }
 
 ::selection {
-  background: #A8D2EF;
+  background: var(--accentColor);
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: .5rem;
   z-index: 0;
 }
  
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
  
-body::-webkit-scrollbar-thumb {
-  background-color: #A8D2EF;
-  outline: 1px solid #A8D2EF;
+*::-webkit-scrollbar-thumb {
+  background-color: var(--accentColor);
+  outline: 1px solid var(--accentColor);
 }
 
 header, main {

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #595C63;
+  background: var(--defaultColor);
   margin-bottom: 2rem;
   position: relative;
 }
@@ -14,13 +14,14 @@
 .searchform button {
   background: none;
   border: none;
-  outline-color: #A8D2EF;
+  outline: none;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   margin: 0;
   padding: 1rem;
   border-radius: 0;
+  transition: all .2s ease;
 }
 
 .searchform input {
@@ -28,32 +29,34 @@
 }
 
 .searchform select {
-  border-top: 1px solid #7A7D82;
+  border-top: 1px solid var(--defaultColor);
+}
+
+.searchform input:focus,
+.searchform select:focus {
+  background: var(--defaultColor);
 }
 
 .searchform option {
-  background: #2F333C;
+  background: #000000;
 }
 
 .searchform button {
   padding: 1rem 2rem;
   cursor: pointer;
-  background: #7A7D82;
+  background: var(--defaultColor);
   text-transform: uppercase;
   transition: all .2s ease;
 }
 
-.searchform button:hover {
-  background: #9A9DAF;
-}
-
-.searchform button:active {
-  background: #8A8DAA;
+.searchform button:hover,
+.searchform button:focus {
+  background: var(--focusColor);
 }
 
 .searchform button:disabled {
   opacity: 0.5;
-  background: #7A7D82;
+  background: var(--defaultColor);
   cursor: not-allowed;
 }
 

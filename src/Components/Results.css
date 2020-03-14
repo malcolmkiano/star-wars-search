@@ -19,6 +19,7 @@
   justify-content: space-between;
   padding: 0;
   border: none;
+  background: none;
 }
 
 .results .btn {
@@ -26,7 +27,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  background: #7A7D82;
+  background: var(--defaultColor);
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -34,17 +35,14 @@
   transition: all .2s ease;
 }
 
-.results .btn:hover {
-  background: #9A9DAF;
-}
-
-.results .btn:active {
-  background: #8A8DAA;
+.results .btn:hover,
+.results .btn:focus {
+  background: var(--focusColor);
 }
 
 .results .btn:disabled {
   opacity: 0.5;
-  background: #7A7D82;
+  background: var(--defaultColor);
   cursor: not-allowed;
 }
 
@@ -56,14 +54,23 @@
   color: inherit;
   padding: 0;
   outline: none;
+  text-align: left;
+  pointer-events: none;
 }
 
 .results li {
-  border: 1px solid #7A7D82;
+  border: 1px solid var(--defaultColor);
+  background: var(--resultColor);
   padding: 1.2rem;
   margin-bottom: 2rem;
   user-select: none;
   transition: all .2s ease;
+}
+
+.results li:not(.buttons):hover,
+.results li:not(.buttons):focus-within {
+  background: var(--hoverColor);
+  border-color: var(--fgColor);
 }
 
 .results li[crawl] {
@@ -72,8 +79,7 @@
 
 .results li[crawl]:hover,
 .results li[crawl]:focus-within {
-  background: rgba(255,255,255,0.1);
-  border-color: #A8D2EF;
+  border-color: var(--accentColor);
 }
 
 .results li h2 {
@@ -99,12 +105,12 @@
 .results li .stats .stat {
   width: 50%;
   text-transform: uppercase;
-  color: #7A7D82;
+  color: var(--focusColor);
   margin-bottom: 1rem;
 }
 
 .results li .stats .stat b {
-  color: #9C9FA4;
+  color: var(--statColor);
   display: block;
   width: 90%;
 }
