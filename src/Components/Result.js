@@ -51,9 +51,14 @@ class Result extends React.Component {
         <div className="stats">
           {
             Object.keys(stats).map(stat => {
+              let val = stats[stat];
+              if ((typeof val === 'object' && val[0].startsWith('http')) ||
+                  (typeof val === 'string' && val.startsWith('http'))) {
+                val = '...';
+              }
               return (
                 <span key={stat} className="stat">
-                  {stat.split('_').join(' ')}: <b>{stats[stat]}</b>
+                  {stat.split('_').join(' ')}: <b>{val}</b>
                 </span>
               )
             })
