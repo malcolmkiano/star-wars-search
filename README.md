@@ -1,7 +1,8 @@
 # Star Wars Search
-🔍 Find people, planets, films, and more from the Star Wars Universe.
-
+🔍 Find people, planets, films, and more from the Star Wars Universe.<br />
 🚀 Live now at https://star-wars-search-sigma.now.sh/
+
+-----------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

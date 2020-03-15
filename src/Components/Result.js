@@ -11,6 +11,7 @@ class Result extends React.Component {
   }
 
   componentDidMount(){
+    const limit = 3;
     let {stats} = this.state;
     Object.keys(stats).forEach(stat => {
       if (typeof stats[stat] === 'string' && stats[stat].startsWith('http')) {
@@ -24,12 +25,14 @@ class Result extends React.Component {
             });
           })
       } else if (typeof stats[stat] === 'object') {
-        Promise.all(stats[stat].map(url => api.get(url).then(data => data.name || data.title)))
+        let list = stats[stat].slice(0, limit);
+        let sliced = stats[stat].length > limit ? ` + ${stats[stat].length - limit} more` : '';
+        Promise.all(list.map(url => api.get(url).then(data => data.name || data.title)))
         .then(data => {
           this.setState({
             stats: {
               ...this.state.stats,
-              [stat]: data.join(', ')
+              [stat]: data.join(', ') + sliced
             }
           });
         })
@@ -42,10 +45,9 @@ class Result extends React.Component {
     return (
       <li
         className="animated fadeInUp"
-        onClick={this.props.onClick}
         crawl={this.props.hasCrawl}
         style={this.props.style}>
-        <h2><button>{name}</button></h2>
+        <h2><button onClick={this.props.onClick}>{name}</button></h2>
         <div className="stats">
           {
             Object.keys(stats).map(stat => {

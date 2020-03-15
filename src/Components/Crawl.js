@@ -1,7 +1,5 @@
 import React from 'react';
 
-import audio from '../media/title.mp3';
-
 import './Crawl.css';
 
 class Crawl extends React.Component {
@@ -14,10 +12,6 @@ class Crawl extends React.Component {
     setTimeout(() => {
       this.props.onClose();
     }, 500);
-  }
-
-  componentDidMount() {
-    this.audio.volume = 0.3;
   }
 
   render() {
@@ -38,7 +32,6 @@ class Crawl extends React.Component {
             {lines}
           </p>
         </div>
-        <audio ref={ref => this.audio = ref} src={audio} autoPlay/>
       </div>
     )
   }

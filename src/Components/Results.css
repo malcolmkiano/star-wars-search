@@ -55,7 +55,16 @@
   padding: 0;
   outline: none;
   text-align: left;
-  pointer-events: none;
+  transition: all .2s ease;
+  max-width: 90%;
+}
+
+.results li[crawl] button {
+  cursor: pointer;
+}
+
+.results li[crawl] button:hover {
+  color: var(--accentColor);
 }
 
 .results li {
@@ -71,15 +80,6 @@
 .results li:not(.buttons):focus-within {
   background: var(--hoverColor);
   border-color: var(--fgColor);
-}
-
-.results li[crawl] {
-  cursor: pointer;
-}
-
-.results li[crawl]:hover,
-.results li[crawl]:focus-within {
-  border-color: var(--accentColor);
 }
 
 .results li h2 {

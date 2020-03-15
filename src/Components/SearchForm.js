@@ -23,6 +23,7 @@ class SearchForm extends React.Component {
           <option value="vehicles">Vehicles</option>
           <option value="starships">Starships</option>
         </select>
+        <span>▼</span>
         <button disabled={this.props.disabled}>Search</button>
       </form>
     )
