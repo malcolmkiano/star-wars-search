@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Result from './Result';
 import './Results.css';
 
 class Results extends React.Component {
@@ -11,8 +12,8 @@ class Results extends React.Component {
         stat === 'created' ||
         stat === 'edited' ||
         stat === 'opening_crawl' ||
-        typeof data[stat] === 'object' ||
-        (typeof data[stat] === 'string' && data[stat].startsWith('https:'))) {
+        stat === 'url' ||
+        (typeof data[stat] === 'object' && data[stat].length === 0)) {
         delete data[stat];
       }
     });
@@ -35,27 +36,19 @@ class Results extends React.Component {
         content: item['opening_crawl']
       };
       const hasCrawl = crawl.content ? 'yes' : undefined;
+      const itemObj = {
+        name: item.name || item.title,
+        stats: stats
+      }
 
       return (
-        <li
-          key={item.name || item.title}
-          className="animated fadeInUp"
+        <Result
+          key={itemObj.name}
           onClick={() => crawl.content ? this.props.onShowCrawl(crawl) : ''}
-          crawl={hasCrawl}
-          style={styleObj}>
-          <h2><button>{item.name || item.title}</button></h2>
-          <div className="stats">
-            {
-              Object.keys(stats).map(stat => {
-                return (
-                  <span key={stat} className="stat">
-                    {stat.split('_').join(' ')}: <b>{item[stat]}</b>
-                  </span>
-                )
-              })
-            }
-          </div>
-        </li>
+          hasCrawl={hasCrawl}
+          style={styleObj}
+          data={itemObj}
+          />
       );
     });
     

@@ -1,7 +1,6 @@
-function getData(endpoint, query, page=1) {
-  const URL = `https://swapi.co/api/${endpoint}?search=${query}&page=${page}`;
+function get(url){
   let error;
-  return fetch(URL)
+  return fetch(url)
     .then(res => {
       if (!res.ok) error = res.status;
 
@@ -16,6 +15,12 @@ function getData(endpoint, query, page=1) {
     });
 }
 
+function getData(endpoint, query, page=1) {
+  const URL = `https://swapi.co/api/${endpoint}?search=${query}&page=${page}`;
+  return get(URL);
+}
+
 export default {
-  getData
+  getData,
+  get
 }

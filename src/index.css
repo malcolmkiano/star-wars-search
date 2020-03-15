@@ -22,8 +22,8 @@ html, body {
 
 body {
   font-family: 'Roboto Mono', monospace;
-  background-image: url('./media/bg.png');
-  background-size: auto 100vh;
+  background-image: url('./media/starfield.png');
+  background-size: 400%;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -33,7 +33,7 @@ body {
 
 #root {
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.3);
 }
 
 @keyframes movearound {

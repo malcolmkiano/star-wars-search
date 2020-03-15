@@ -114,9 +114,3 @@
   display: block;
   width: 90%;
 }
-
-@media screen and (min-width: 800px) {
-  .results li .stats .stat {
-    width: 25%;
-  }
-}
