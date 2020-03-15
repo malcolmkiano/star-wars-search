@@ -56,14 +56,14 @@
 .searchform button {
   padding: 1rem 2rem;
   cursor: pointer;
-  background: var(--defaultColor);
+  background: var(--focusColor);
   text-transform: uppercase;
   transition: all .2s ease;
 }
 
 .searchform button:hover,
 .searchform button:focus {
-  background: var(--focusColor);
+  background: var(--accentColor);
 }
 
 .searchform button:disabled {

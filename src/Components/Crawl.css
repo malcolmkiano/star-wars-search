@@ -5,7 +5,7 @@
   right: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../media/starfield.png);
+  background-image: url(../media/starfield.jpg);
   background-color: #222222;
   background-blend-mode: overlay;
   background-size: cover;
@@ -15,6 +15,7 @@
   justify-content: center;
   perspective: 400px;
   overflow: hidden;
+  z-index: 5;
 }
 
 .crawl-space button {
@@ -72,7 +73,7 @@
 
 @keyframes crawl {
   0% {
-    top: 100rem;
+    top: 120rem;
     transform: rotateX(40deg) translateZ(0);
   }
   100% {
@@ -88,7 +89,7 @@
   
   @keyframes crawl {
     0% {
-      top: 250rem;
+      top: 270rem;
       transform: rotateX(40deg) translateZ(0);
     }
     100% {

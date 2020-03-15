@@ -17,8 +17,8 @@
   height: 1rem;
   width: .4rem;
   margin: 0 .15rem;
-  background: #7A7D82;
-  animation: flash 1s ease infinite;
+  background: var(--focusColor);
+  animation: load 1s ease infinite;
 }
 
 .loader span:nth-of-type(2) {
@@ -29,7 +29,7 @@
   animation-delay: .2s;
 }
 
-@keyframes flash {
-  0%, 60%, 100% { background: var(--focusColor) }
-  80% { background: var(--fgColor) }
+@keyframes load {
+  0%, 60%, 100% { background: var(--focusColor); }
+  80% { background: var(--accentColor); }
 }

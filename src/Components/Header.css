@@ -1,6 +1,7 @@
 header {
   text-align: center;
   margin: 3rem 0 2rem;
+  filter: drop-shadow(0 0 1rem rgb(0,0,0))
 }
 
 header .logo {
@@ -28,4 +29,10 @@ header h1::before {
 
 header p {
   margin: 0;
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    margin-top: 4rem;
+  }
 }

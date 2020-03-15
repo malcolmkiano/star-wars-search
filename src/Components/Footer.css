@@ -7,3 +7,16 @@ footer {
 footer a {
   color: inherit;
 }
+
+footer .links {
+  margin-bottom: 2rem;
+  z-index: 0 !important;
+}
+
+footer .links #st-1 {
+  font-family: inherit !important;
+}
+
+footer .links .st-total {
+  color: var(--fgColor) !important;
+}

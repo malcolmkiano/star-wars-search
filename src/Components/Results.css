@@ -91,14 +91,14 @@
   flex-wrap: wrap;
   max-height: 0;
   opacity: 0;
-  transition: all .4s ease;
+  transition: all .4s linear;
   overflow: hidden;
 }
 
 .results li:hover .stats,
 .results li:focus-within .stats {
   margin-top: .5rem;
-  max-height: 99rem;
+  max-height: 100vh;
   opacity: 1;
 }
 
