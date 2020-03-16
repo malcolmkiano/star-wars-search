@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/star-wars-search/static/css/main.a5c6103b.chunk.css",
+    "main.js": "/star-wars-search/static/js/main.c6040573.chunk.js",
+    "main.js.map": "/star-wars-search/static/js/main.c6040573.chunk.js.map",
+    "runtime-main.js": "/star-wars-search/static/js/runtime-main.4ac9aa7e.js",
+    "runtime-main.js.map": "/star-wars-search/static/js/runtime-main.4ac9aa7e.js.map",
+    "static/js/2.df5ab694.chunk.js": "/star-wars-search/static/js/2.df5ab694.chunk.js",
+    "static/js/2.df5ab694.chunk.js.map": "/star-wars-search/static/js/2.df5ab694.chunk.js.map",
+    "index.html": "/star-wars-search/index.html",
+    "precache-manifest.c53500c9c953d9284ec42b09151ff81f.js": "/star-wars-search/precache-manifest.c53500c9c953d9284ec42b09151ff81f.js",
+    "service-worker.js": "/star-wars-search/service-worker.js",
+    "static/css/main.a5c6103b.chunk.css.map": "/star-wars-search/static/css/main.a5c6103b.chunk.css.map",
+    "static/js/2.df5ab694.chunk.js.LICENSE.txt": "/star-wars-search/static/js/2.df5ab694.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/star-wars-search/static/media/starfield.34ea7c1c.jpg",
+    "static/media/swlogo.svg": "/star-wars-search/static/media/swlogo.c41f740a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4ac9aa7e.js",
+    "static/js/2.df5ab694.chunk.js",
+    "static/css/main.a5c6103b.chunk.css",
+    "static/js/main.c6040573.chunk.js"
+  ]
+}
