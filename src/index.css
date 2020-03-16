@@ -10,12 +10,12 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  --bgColor: rgb(30, 36, 45);
+  --bgColor: rgb(30,30,30);
   --fgColor: rgb(255,255,255);
   --defaultColor: rgba(255,255,255,0.2);
   --focusColor: rgba(255,255,255,0.3);
   --statColor: rgba(255,255,255,0.7);
-  --accentColor: rgb(230, 186, 43);
+  --accentColor: rgb(230,186,43);
   --resultColor: rgba(0,0,0,0.75);
   --hoverColor: rgb(0,0,0);
 }
@@ -23,7 +23,6 @@ html, body {
 body {
   font-family: 'Roboto Mono', monospace;
   background-image: url('./media/starfield.jpg');
-  background-color: #222222;
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
@@ -53,6 +52,10 @@ body {
 
 .animated {
   animation-duration: .5s;
+}
+
+*::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.65)
 }
 
 ::selection {
