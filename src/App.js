@@ -24,7 +24,8 @@ class App extends React.Component {
     crawl: null,
     error: null
   }
-
+  
+  /** performs API call based on values in state */
   getData() {
     const {endpoint, query, page} = this.state;
     api.getData(endpoint, query, page)
@@ -46,6 +47,10 @@ class App extends React.Component {
       });
   }
 
+  /**
+   * updates value of page in state then calls getData
+   * @param {number} [n] number of pages to navigate (1 or -1)
+   */
   navigateToPage = (n=1) => {
     document.querySelector('.App').scrollTop = 0;
     let page = this.state.page + n;
@@ -55,6 +60,11 @@ class App extends React.Component {
     }, this.getData);
   }
 
+  /**
+   * updates state with values from form then calls getData
+   * @param {string} endpoint the endpoint to get data from
+   * @param {string} query the search query
+   */
   handleSearch = (endpoint, query) => {
     this.setState({
       page: 1,
@@ -64,6 +74,12 @@ class App extends React.Component {
     }, this.getData);
   }
 
+  /**
+   * shows crawl component when a film title is clicked
+   * @param {object} crawl the crawl object for the film
+   * @param {string} crawl.title the title of the film
+   * @param {string} crawl.content the crawl content for the film
+   */
   handleCrawl = crawl => {
     if (crawl) {
       this.setState({
@@ -74,6 +90,7 @@ class App extends React.Component {
     }
   }
 
+  /** closes the crawl component */
   handleClose = () => {
     this.setState({
       crawl: null

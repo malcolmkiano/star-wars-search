@@ -4,6 +4,11 @@ import Result from './Result';
 import './Results.css';
 
 class Results extends React.Component {
+
+  /**
+   * filters unwanted keys out of a result
+   * @param {Object} obj individual result to filter keys from
+   */
   getStats(obj) {
     let data = {...obj}
     Object.keys(data).forEach(stat => {
@@ -20,6 +25,7 @@ class Results extends React.Component {
     return data;
   }
 
+  /** maps through 'rel' prop to create a list of Result components */
   generateResultsList(){
     let i = 0;
     const {data, searched, error} = this.props.rel;

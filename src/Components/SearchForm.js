@@ -3,6 +3,8 @@ import React from 'react';
 import './SearchForm.css';
 
 class SearchForm extends React.Component {
+
+  /** intercepts form submission and grabs form values */
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;

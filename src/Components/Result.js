@@ -10,6 +10,7 @@ class Result extends React.Component {
     }
   }
 
+  /** checks each stat and makes necessary extra api calls to populate result */
   componentDidMount(){
     const limit = 3;
     let {stats} = this.state;

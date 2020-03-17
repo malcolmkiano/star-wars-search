@@ -7,6 +7,7 @@ class Crawl extends React.Component {
     animation: 'fadeIn'
   };
 
+  /** closes the component */
   handleClose = () => {
     this.setState({ animation: 'fadeOut' });
     setTimeout(() => {
