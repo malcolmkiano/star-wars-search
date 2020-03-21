@@ -1,6 +1,6 @@
 import React from 'react';
 
-import api from '../api';
+import api from '../../Modules/api';
 
 class Result extends React.Component {
   constructor(props){
@@ -25,7 +25,7 @@ class Result extends React.Component {
               }
             });
           })
-      } else if (typeof stats[stat] === 'object') {
+      } else if (Array.isArray(stats[stat])) {
         let list = stats[stat].slice(0, limit);
         let sliced = stats[stat].length > limit ? ` + ${stats[stat].length - limit} more` : '';
         Promise.all(list.map(url => api.get(url).then(data => data.name || data.title)))

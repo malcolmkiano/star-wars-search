@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Header from './Components/Header';
-import SearchForm from './Components/SearchForm';
-import Loader from './Components/Loader';
-import Results from './Components/Results';
-import Crawl from './Components/Crawl';
-import Footer from './Components/Footer';
+import Header from '../Components/Header/Header';
+import SearchForm from '../Components/SearchForm/SearchForm';
+import Loader from '../Components/Loader/Loader';
+import Results from '../Views/Results/Results';
+import Crawl from '../Views/Crawl/Crawl';
+import Footer from '../Components/Footer/Footer';
 import './App.css';
 
-import api from './api';
+import api from '../Modules/api';
 
 class App extends React.Component {
   state = {

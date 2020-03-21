@@ -1,6 +1,14 @@
 # Star Wars Search
 🔍 Find people, planets, films, and more from the Star Wars Universe.<br />
-🚀 Live now at https://malcolmkiano.github.io/star-wars-search
+🚀 Live now at https://malcolmkiano.github.io/star-wars-search<br />
+
+
+## Screenshots
+![mobile](https://malcolmkiano.com/img/star-wars-search.jpg)
+
+
+## Contribute
+Have any cool ideas for improvements on the functionality of this app? Feel free to fork this repo. Excited to see what you create! 🤩<br />
 
 -----------------------
 

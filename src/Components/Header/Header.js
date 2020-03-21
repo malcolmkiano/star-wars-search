@@ -1,6 +1,6 @@
 import React from 'react';
 
-import swlogo from '../media/swlogo.svg'
+import swlogo from '../../media/swlogo.svg'
 import './Header.css';
 
 class Header extends React.Component {

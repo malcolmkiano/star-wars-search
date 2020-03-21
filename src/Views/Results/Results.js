@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Result from './Result';
+import Result from '../../Components/Result/Result';
 import './Results.css';
 
 class Results extends React.Component {
