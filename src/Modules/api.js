@@ -21,11 +21,10 @@ async function get(url){
  * @param {number} [page] the page to get the data from
  */
 function getData(endpoint, query, page=1) {
-  const URL = `https://swapi.co/api/${endpoint}?search=${query}&page=${page}`;
+  const URL = `https://swapi-sws.herokuapp.com/${endpoint}?q=${query}&p=${page}`;
   return get(URL);
 }
 
 export default {
-  getData,
-  get
+  getData
 }

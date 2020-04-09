@@ -19,8 +19,8 @@ class App extends React.Component {
     endpoint: null,
     query: null,
     page: null,
-    next: null,
-    prev: null,
+    next: false,
+    prev: false,
     crawl: null,
     error: null
   }
@@ -36,7 +36,7 @@ class App extends React.Component {
           searched: true,
           loading: false,
           next: data.next,
-          previous: data.previous
+          prev: data.prev
         });
       })
       .catch(err => {

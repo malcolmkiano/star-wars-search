@@ -17,7 +17,7 @@ class Results extends React.Component {
         stat === 'created' ||
         stat === 'edited' ||
         stat === 'opening_crawl' ||
-        stat === 'url' ||
+        stat === 'id' ||
         (typeof data[stat] === 'object' && data[stat].length === 0)) {
         delete data[stat];
       }
@@ -79,7 +79,7 @@ class Results extends React.Component {
           <li className="buttons">
             <button
               className="btn"
-              disabled={!this.props.rel.previous}
+              disabled={!this.props.rel.prev}
               onClick={() => this.props.onNavigate(-1)}>Previous page</button>
             <button
               className="btn"
