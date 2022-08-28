@@ -1,6 +1,5 @@
 # Star Wars Search
 🔍 Find people, planets, films, and more from the Star Wars Universe.<br />
-🚀 Live now at https://malcolmkiano.github.io/star-wars-search<br />
 
 
 ## Screenshots
